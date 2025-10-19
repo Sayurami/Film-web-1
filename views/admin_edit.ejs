@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Movie - GOJO Films</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="green-theme">
+  <main>
+    <h2>Edit Movie</h2>
+    <% if(error){ %>
+      <p class="error"><%= error %></p>
+    <% } %>
+    <form action="/admin/edit/<%= movie.id %>" method="post">
+      <input type="text" name="title" value="<%= movie.title %>" required>
+      <input type="text" name="type" value="<%= movie.type %>" required>
+      <input type="text" name="year" value="<%= movie.year %>" required>
+      <input type="text" name="poster_url" value="<%= movie.poster_url %>">
+      <input type="text" name="trailer_url" value="<%= movie.trailer_url %>">
+      <input type="text" name="drive_id" value="<%= movie.drive_id %>">
+      <textarea name="description"><%= movie.description %></textarea>
+      <button type="submit">Update Movie</button>
+    </form>
+  </main>
+</body>
+</html>
