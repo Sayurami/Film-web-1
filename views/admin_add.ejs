@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Movie - GOJO Films</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="green-theme">
+  <main>
+    <h2>Add Movie</h2>
+    <% if(error){ %>
+      <p class="error"><%= error %></p>
+    <% } %>
+    <form action="/admin/add" method="post">
+      <input type="text" name="title" placeholder="Title" required>
+      <input type="text" name="type" placeholder="Dub/Sub" required>
+      <input type="text" name="year" placeholder="Year" required>
+      <input type="text" name="poster_url" placeholder="Poster URL">
+      <input type="text" name="trailer_url" placeholder="Trailer URL">
+      <input type="text" name="drive_id" placeholder="Google Drive ID">
+      <textarea name="description" placeholder="Description"></textarea>
+      <button type="submit">Add Movie</button>
+    </form>
+  </main>
+</body>
+</html>
