@@ -1,0 +1,49 @@
+body.green-theme {
+  font-family: Arial, sans-serif;
+  background: #e8f5e9;
+  color: #1b5e20;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #2e7d32;
+  color: white;
+  padding: 10px;
+}
+
+header h1 { margin: 0; }
+header nav a {
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+main { padding: 20px; }
+
+.movies { display: flex; flex-wrap: wrap; gap: 15px; }
+.movie-card { width: 150px; }
+.movie-card img { width: 100%; height: auto; border-radius: 5px; }
+
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 8px; border: 1px solid #ccc; text-align: left; }
+
+.error { color: red; font-weight: bold; }
+
+input, textarea, button {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover { background: #1b5e20; }
