@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GOJO Films</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="green-theme">
+  <header>
+    <h1>GOJO Films</h1>
+    <nav>
+      <% if(user && user.isAdmin){ %>
+        <a href="/admin">Admin Panel</a> | <a href="/admin/logout">Logout</a>
+      <% } else { %>
+        <a href="/admin/login">Admin Login</a>
+      <% } %>
+    </nav>
+  </header>
+  <main>
+    <h2>Movies</h2>
+    <div class="movies">
+      <% movies.forEach(movie => { %>
+        <div class="movie-card">
+          <a href="/movie/<%= movie.id %>">
+            <img src="<%= movie.poster_url || '/images/placeholder.png' %>" alt="<%= movie.title %>">
+            <h3><%= movie.title %></h3>
+          </a>
+        </div>
+      <% }) %>
+    </div>
+  </main>
+</body>
+</html>
