@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel - GOJO Films</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="green-theme">
+  <header>
+    <h1>Admin Panel</h1>
+    <nav>
+      <a href="/admin/add">Add Movie</a> | <a href="/admin/logout">Logout</a>
+    </nav>
+  </header>
+  <main>
+    <h2>All Movies</h2>
+    <table>
+      <tr><th>ID</th><th>Title</th><th>Type</th><th>Year</th><th>Actions</th></tr>
+      <% movies.forEach(movie => { %>
+      <tr>
+        <td><%= movie.id %></td>
+        <td><%= movie.title %></td>
+        <td><%= movie.type %></td>
+        <td><%= movie.year %></td>
+        <td>
+          <a href="/admin/edit/<%= movie.id %>">Edit</a> |
+          <a href="/admin/delete/<%= movie.id %>" onclick="return confirm('Delete?')">Delete</a>
+        </td>
+      </tr>
+      <% }) %>
+    </table>
+  </main>
+</body>
+</html>
