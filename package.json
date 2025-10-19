@@ -1,11 +1,10 @@
 {
   "name": "gojo-films",
   "version": "1.0.0",
-  "description": "GOJO Films - Sinhala Dub/Sub Movie Site (Node.js + Express + SQLite)",
+  "description": "GOJO Films - Sinhala Dub/Sub Movie Site (Node.js + Express + MongoDB)",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "initdb": "node init_db.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -13,6 +12,19 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
-    "sqlite3": "^5.1.6"
-  }
+    "mongodb": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "movies",
+    "express",
+    "nodejs",
+    "mongodb",
+    "sinhaladub",
+    "sinhalasub"
+  ],
+  "author": "Sayura",
+  "license": "MIT"
 }
